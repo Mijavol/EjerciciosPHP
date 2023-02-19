@@ -66,28 +66,41 @@
             $modulo1 = $N % $M;
             echo "la suma es: $suma1 <br>", "la resta $resta1 <br>", 
             "la multiplicación $producto1 <br>". " y el modulo es $modulo1 <br> <br>";
-          
+            
+
+            echo "el doble de cada variable: <br> ".'$X: ' . $X*2 . "<br>"
+            .'$Y: '. $Y*2 . "<br>".'$N: '. $N*2 . "<br>".'$M: '. $M*2 . "<br>";
+            $sumTotal = $X + $Y + $N + $M;
+            echo "Suma de todas las variables: " . $sumTotal . "<br>";
+            $prodTotal = $X * $Y * $N * $M;
+            echo "Prodcuto de todas las variables: " . $prodTotal . "<br>";
+            echo "<br>";
+            
           print"EJERCICIO 5 <br> <br>";
 
             $nota1 = array(5, 9, 6, 12, 71);
             $nota2 = array(10, 8, 20);
+            
             print_r($nota2);
             echo "array nota2 <br>";
-            $nota2[3] = 42 ;//ingresamos elemento al array nota2
+            $nota2[] = 42 ;//ingresamos elemento al array nota2
             print_r($nota2); 
-            echo "elemento incluido en array nota2 <br>";
+            echo "elemento incluido en array nota2 <br> <br>";
+
             print_r($nota1);
             echo "array nota1 <br> <br>";
 
             for($i = 0 ; $i <=  count($nota2)-1 ;++$i){//unimos arrays
-              $nota1[count($nota1)] = $nota2[$i];
+              $nota1[] = $nota2[$i];
             }
-            for($a = 0;$a <= count($nota1)-1; $a++){
-              print_r($nota1[$a]);
-              echo "<br>";
-            }
+            echo "<br>";
             print_r($nota1);
-            echo "los dos arrays unidos"
+            echo "arrays unidas <br>";
+            echo "<br>";
+            echo "los dos arrays unidos que tiene " . "<b>" . count($nota1) . "</b>" . " elementos"
+            
+            
+    
     ?>
   </body>
 </html>
