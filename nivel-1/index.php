@@ -82,7 +82,7 @@
             for($i = 0 ; $i <=  count($nota2)-1 ;++$i){//unimos arrays
               $nota1[count($nota1)] = $nota2[$i];
             }
-            for($a = 0;$a <= count($nota1)-1; ++$a){
+            for($a = 0;$a <= count($nota1)-1; $a++){
               print_r($nota1[$a]);
               echo "<br>";
             }
