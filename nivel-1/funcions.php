@@ -15,12 +15,9 @@ function ParImpar($num)
 //ejercicio 2
 echo "EJERCICIO 2<br>";
 function escondite(){
-  for($t = 1;$t <= 10; $t++)
+  for($t = 2;$t <= 10; $t+=2)
   {
-    if($t % 2 == 0)
-    {
-      echo $t . " ";
-    }
+    echo $t . " ";
   }
   echo "<br>";
 }
@@ -41,18 +38,13 @@ contaLimite(27);
 
 //ejercicio 4
 echo "EJERCICIO 4 <br>";
-function escondite10($h = 1,$f = 10){//se cuenta hasta 10($f)como parametro por defecto y de 1 en 1 con la variable $h 
+function escondite10($f = 10){//se cuenta hasta 10($f)como parametro por defecto y de 1 en 1 con la variable $h 
   for($t = 1;$t <= $f; $t++){        //pero se puede elegir de cuanto en cuanto contar con $h y con el limite que se quiera llegar con parametro $f
-    if($t % $h == 0)
-    {
       echo $t . " ";
-    }
   }
   echo "<br>"; 
 }
 escondite10();
-escondite10(2);
-escondite10(3,19);
 
 //ejercicio 5
 echo "EJERCICIO 5 <br>";
@@ -71,18 +63,14 @@ function Grado($nota)
   {
     echo " Grado de Segunda Division";
   }
-  else if( $nota >= 60 and $nota <= 100)
-  {
-    echo " Grado de Primera Division";
-  } 
   else
   {
-    echo "ERROR en la Nota";
+    echo " Grado de Primera Division";
   }
   echo "<br>";
 }
-Grado(46);
-Grado(18);
+Grado(59);
+Grado(99);
 
 //ejercicio 6
 echo "EJERCICIO 6 <br>";
