@@ -1,64 +1,35 @@
 <?php
-class figura{ //clase padre
-  protected $ancho;
-  protected $alto;
-  protected $resultado;
-
-  public function __construct($anc,$alt)
-  {
-    $this->ancho = $anc;
-    $this->alto = $alt;
-  }
-
-  public function resultado()
-  {
-    echo $this->resultado . "<br>";
-  }
+abstract class figura{    
+   public $anc;
+   public $alt;
+    abstract public function area($anc,$alt);
 }
-//clase hija
-class rectangulo extends figura{
-  public function __construct($anc, $alt){
-    figura::__construct($anc,$alt);
-  }
 
-  //metodos clase
-  public function area()
-  {
-    $this->resultado = $this->ancho * $this->alto;
-    echo "El area del rectangulo es: </n>";
-  }
-}
-//clase hija
 class triangulo extends figura{
-  public function __construct($anc, $alt){
-    figura::__construct($anc,$alt);
+  public function area($anc,$alt){
+    return print($anc * $alt/2 . "<br>");
   }
-  //metodos de clase
-  public function area()
-  {
-    $this->resultado = $this->ancho * $this->alto/2;
-    echo "El area del triangulo es: </n>";
-  }
-  
 }
 
-$rectangulo1 = new rectangulo(5,6);
-$rectangulo1->area();
-$rectangulo1->resultado();
-$triangulo1 = new triangulo(12,15);
-$triangulo1->area();
-$triangulo1->resultado();
+class rectangulo extends figura{
+  public function area($anc,$alt){
+    return print($anc * $alt . "<br>");
+  }
+}
 
+class circulo extends figura{
+  public $radio;
+  public function area($radio,$PI = 3.1416){
+    return print($PI * $radio * $radio);
+  }
+}
+$rectangulo1 = new rectangulo();
+$rectangulo1->area(5,9);
 
+$triangulo1 = new triangulo();
+$triangulo1->area(5,6);
 
-
-
-
-
-
-
-
-
-
+$circulo1 = new circulo();
+$circulo1->area(15);
 
 ?>
